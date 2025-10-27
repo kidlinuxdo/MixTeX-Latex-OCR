@@ -4,7 +4,7 @@ import os
 # 创建DPI感知的清单文件
 manifest = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
-  <assemblyIdentity type="win32" name="MixTeX" version="3.2.4.0" processorArchitecture="*"/>
+  <assemblyIdentity type="win32" name="OCRTeX" version="3.2.4.0" processorArchitecture="*"/>
   <dependency>
     <dependentAssembly>
       <assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" 
@@ -93,7 +93,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='MixTeX',
+    name='OCRTeX',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
