@@ -35,7 +35,7 @@ class MixTeXApp:
             print(f"DPI 设置失败: {e}")
             self.dpi_scale = 1.0
         
-        self.root.title('MixTeX')
+        self.root.title('OCRTeX')
         self.root.resizable(False, False)
         self.root.overrideredirect(True)
         self.root.wm_attributes('-topmost', 1)
@@ -190,7 +190,7 @@ class MixTeXApp:
         self.tray_icon.visible = True
 
     def show_about(self):
-        about_text = "MixTeX\n版本: v1.0 \n作者: 王可"
+        about_text = "OCRTeX\n版本: v1.0 \n作者: 王可"
         self.text_box.delete(1.0, tk.END)
         self.text_box.insert(tk.END, about_text)
 
@@ -235,7 +235,7 @@ class MixTeXApp:
             item('退出', self.quit)
         )
 
-        self.tray_icon = pystray.Icon("MixTeX", self.icon, "MixTeX", menu)
+        self.tray_icon = pystray.Icon("OCRTeX", self.icon, "OCRTeX", menu)
         threading.Thread(target=self.tray_icon.run, daemon=True).start()
 
     def show_window(self):
